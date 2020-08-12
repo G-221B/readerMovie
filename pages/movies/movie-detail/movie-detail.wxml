@@ -1,0 +1,50 @@
+<import src="../starts/starts-template.wxml" />
+<image src="{{movie.movieImg}}" class="top-img" />
+<view class="header-container">
+	<text class="movie-title">{{movie.title}}</text>
+	<text class="movie-time">{{movie.country + ' · ' + movie.year}}</text>
+	<view class="movie-count">
+		<text class="highlight-font">{{movie.wishCount}}</text>
+		<text class="plain-font">喜欢</text>
+		<text class="highlight-font">{{movie.commentCount}}</text>
+		<text class="plain-font">条评论</text>
+	</view>
+</view>
+<image src="{{movie.movieImg}}" class="movie-img" />
+<view class="body-container">
+	<text class="original-title">{{movie.originalTitle}}</text>
+	<view class="flex-row">
+		<text class="mark">评分</text>
+		<template is="starts-template" data="{{...movie}}" />
+	</view>
+	<view class="flex-row">
+		<text class="mark">导演</text>
+		<text>{{movie.director.name}}</text>
+	</view>
+	<view class="flex-row">
+		<text class="mark">演员</text>
+		<text>{{movie.casts}}</text>
+	</view>
+	<view class="flex-row">
+		<text class="mark">类型</text>
+		<text>{{movie.generes}}</text>
+	</view>
+</view>
+<view class="hr" />
+<view class="synopsis">
+	<text>剧情简介</text>
+	<text class="summary-content">{{movie.summary}}</text>
+</view>
+<view class="hr" />
+<view class="cast">
+	<text class="cast-font">演员</text>
+	<scroll-view class="cast-imgs" scroll-x="true" style="width:100%">
+		<block wx:for="{{movie.castsInfo}}" wx:for-item="item">
+			<view class="cast-container">
+				<image class="cast-img" src="{{item.img}}" />
+				<text class="cast-name">{{item.name}}</text>
+			</view>
+		</block>
+	</scroll-view>
+</view>
+

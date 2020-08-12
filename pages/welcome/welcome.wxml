@@ -1,0 +1,5 @@
+<view class="body">
+  <image src="/images/avatar/3.png"></image>
+  <text>hello word</text>
+  <view class="button" bind:tap="goPosts"><text>开启小程序之旅</text></view>
+</view>

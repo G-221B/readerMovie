@@ -1,0 +1,9 @@
+<template name="starts-template">
+	<view class="starts-container">
+		<view class="img">
+			<image wx:for="{{starts}}" src="{{item == 1 ? '/images/icon/star.png' : '/images/icon/none-star.png'}}" />
+		</view>
+		<text>{{average}}</text>
+	</view>
+</template>
+

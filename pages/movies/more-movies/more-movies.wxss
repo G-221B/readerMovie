@@ -1,0 +1,5 @@
+/* pages/movies/more-movies/more-movies.wxss */
+@import './movie-grid//movie-grid-template.wxss';
+.movies-container {
+    margin: 20rpx 0 20rpx 30rpx;
+}

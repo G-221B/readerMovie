@@ -1,0 +1,18 @@
+<import src="../movie/movie-template.wxml" />
+<template name="movie-list-template">
+	<view class="movie-list">
+		<view class="list-header">
+			<text>{{title}}</text>
+			<view class="more" catch:tap="goMore" data-title="{{title}}">
+				<text>更多</text>
+				<image class="more-icon" src="/images/icon/arrow-right.png" />
+			</view>
+		</view>
+		<view class="movie-items">
+			<view wx:for="{{list}}">
+				<template is="movie-template" data="{{...item}}" />
+			</view>
+		</view>
+	</view>
+</template>
+

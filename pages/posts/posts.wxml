@@ -1,0 +1,21 @@
+<import src="./posts-item/posts-item.wxml" />
+<view>
+	<swiper autoplay="true" indicator-dots="true" circular="true">
+		<!-- <block wx:for="{{swipers}}" wx:key="index"> -->
+		<swiper-item
+		 wx:for="{{swipers}}"
+		 wx:key="index"
+		 catch:tap="goDetail"
+		 data-post-id="{{item.id}}"
+		>
+			<image src="{{item.url}}" />
+		</swiper-item>
+		<!-- </block> -->
+	</swiper>
+	<block wx:for="{{postList}}" wx:key="id">
+		<view catch:tap="goDetail" data-post-id="{{item.postId}}">
+			<template is="posts-item" data="{{...item}}" />
+		</view>
+	</block>
+</view>
+

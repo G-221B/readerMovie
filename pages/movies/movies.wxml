@@ -1,0 +1,21 @@
+<import src="./movie-list/movie-list-template.wxml" />
+<import src="../movies/more-movies/movie-grid/movie-grid-template.wxml" />
+<view class="search-box">
+	<icon type="search" />
+	<input
+	 placeholder="胡歌"
+	 placeholder-class="input-placeholder"
+	 bind:focus="searchFocus"
+	 bindinput="search"
+	/>
+	<image src="/images/icon/xx.png" class="close-icon" catch:tap="closeInput" />
+</view>
+<view wx:if="{{!showReault}}">
+	<template is="movie-list-template" data="{{...top250}}" />
+	<template is="movie-list-template" data="{{...inTheaters}}" />
+	<template is="movie-list-template" data="{{...comingSoon}}" />
+</view>
+<view class="result-box" wx:if="{{showReault}}">
+	<template is="movie-grid-template" data="{{...searchReault}}" />
+</view>
+

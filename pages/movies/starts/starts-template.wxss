@@ -1,0 +1,13 @@
+.starts-container {
+    display: flex;
+}
+.img {
+    display: flex;
+    align-items: center;
+    margin-right: 23rpx;
+}
+.img image {
+    width: 17rpx;
+    height: 17rpx;
+    margin-left: 3rpx;
+}

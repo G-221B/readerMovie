@@ -1,0 +1,6 @@
+@import '/pages/movies/movie/movie-template.wxss';
+.movie-item {
+    float: left;
+    margin-right: 40rpx;
+    margin-bottom: 20rpx;
+}

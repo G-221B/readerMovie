@@ -1,0 +1,53 @@
+.post-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px 0;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+}
+.post-author-date {
+	display: flex;
+	align-items: center;
+	margin-top: 5px;
+}
+.post-author {
+	width: 60rpx;
+	height: 60rpx;
+	margin-left: 16rpx;
+}
+.post-date {
+	margin-left: 10rpx;
+	font-size: 28rpx;
+	font-weight: 400;
+}
+.post-title {
+	margin: 8px 0 8px 16rpx;
+	font-weight: bold;
+	font-size: 32rpx;
+	color: #333;
+}
+.post-img {
+	width: 100%;
+	height: 400rpx;
+}
+.post-content {
+	margin: 10px 16rpx;
+	color: #666;
+	font-weight: bold;
+	font-size: 32rpx;
+}
+.post-like {
+	display: flex;
+	align-items: center;
+	font-size: 30rpx;
+	padding-left: 16rpx;
+}
+.post-like-img {
+	width: 32rpx;
+	height: 32rpx;
+}
+.post-like-num {
+	margin: 0 16rpx;
+}
